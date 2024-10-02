@@ -11,11 +11,11 @@ let users = [
     }
   ];
 
-  function getUserBtUserName(username){
-return users.find((user)=> user.username ===user);
-  }
+  function getUserByUsername(username) {
+  return users.find((user) => user.username === username);
+}
 
   module.exports ={
-getUserBtUserName
+    getUserByUsername
 
 }

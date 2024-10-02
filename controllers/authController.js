@@ -7,7 +7,7 @@ const JWT_EXPIERES_IN ='30s';
 
 async function login(req,res) {
     const {username, password} = req.body;
-    const user = userModel.getUserBtUserName(username);
+    const user = userModel.getUserByUsername(username);
     if(!user)
         return res.status(403).json({code: 403,message: 'Usuario no encontrado'});
     const isValid = await bcrypt.compare(password, user.password);
